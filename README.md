@@ -28,7 +28,7 @@ Flap movement is a reminder to check the mailbox; it does not guarantee that a l
 
 The current source does not yet include explicit Azure Key Vault or Application Insights integration. Those services are part of the project's learning and integration goals.
 
-## 🛠️ Planned improvements
+## 🛠️ Planned improvements ( as time/ priorities permits)
 
 This is still a work in progress. Next steps include:
 
