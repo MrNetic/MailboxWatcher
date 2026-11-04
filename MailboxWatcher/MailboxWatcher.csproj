@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>2e130881-fe5c-4241-919b-e0b3bfff45d6</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mailjet.Api" Version="4.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Modules\Notifications\Application\" />
+    <Folder Include="Modules\Notifications\Domain\" />
+    <Folder Include="Modules\Notifications\Infrastructure\Presentation\" />
+    <Folder Include="Modules\MailboxEvents\Domain\" />
+    <Folder Include="Modules\MailboxEvents\Infrastructure\" />
+  </ItemGroup>
+
+</Project>

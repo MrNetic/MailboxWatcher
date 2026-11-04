@@ -1,0 +1,6 @@
+@MailboxWatcher_HostAddress = http://localhost:5225
+
+GET {{MailboxWatcher_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
