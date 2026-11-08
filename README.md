@@ -22,11 +22,20 @@ Flap movement is a reminder to check the mailbox; it does not guarantee that a l
 
 - ASP.NET Core API targeting .NET 10.
 - A `POST /api/mailboxevents/shelly` endpoint that receives form data from the Shelly setup.
+- The Shelly endpoint accepts one request per fixed one-minute window across all callers, per application instance. Excess requests receive HTTP 429 and a `Retry-After` header, without being queued. Invalid requests also consume the allowance. This limit resets when the application restarts and does not replace authentication or event deduplication.
 - Event processing with structured logging and a generated event ID.
 - Email notifications through MailerSend.
 - Code organised into mailbox event and notification modules.
 
 The current source does not yet include explicit Azure Key Vault or Application Insights integration. Those services are part of the project's learning and integration goals.
+
+## Shelly request rate limiting
+
+The endpoint uses ASP.NET Core's built-in rate limiter to allow one request per fixed one-minute window, shared across all callers within an application instance. Requests above the limit return HTTP 429 with a `Retry-After` header and are not queued.
+
+The rationale is to reduce bursts of email notifications caused by repeated device requests or several flap movements close together, and to limit calls to the email provider. A shared limit keeps the behaviour simple for the current mailbox use case; using a caller-supplied device ID as the partition key would allow callers to bypass the limit by changing that ID.
+
+This is an in-memory request limit: restarting the application resets it, and multiple instances have independent limits. Requests that reach the limiter consume the allowance even if validation or email delivery later fails. Fixed windows can allow two accepted requests close together across a window boundary, so this is not a strict 60-second interval between notifications. Authentication, event deduplication and reliable delivery remain separate planned improvements.
 
 ## 🛠️ Planned improvements ( as time/ priorities permits)
 

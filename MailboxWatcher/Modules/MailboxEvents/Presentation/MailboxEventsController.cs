@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MailboxWatcher.Modules.MailboxEvents.Application.ReceiveShellyEvent;
 using MailboxWatcher.Modules.MailboxEvents.Presentation.Contracts;
+using Microsoft.AspNetCore.RateLimiting;
 
 namespace MailboxWatcher.Modules.MailboxEvents.Presentation
 {
@@ -9,6 +10,7 @@ namespace MailboxWatcher.Modules.MailboxEvents.Presentation
     public sealed class MailboxEventsController : ControllerBase
     {
         [HttpPost("shelly")]
+        [EnableRateLimiting("shelly")]
         public async Task<ActionResult<ReceiveShellyEventResponse>> ReceiveShellyEvent(
             [FromForm] ReceiveShellyEventRequest request,
             [FromServices] ReceiveShellyEventHandler handler,
