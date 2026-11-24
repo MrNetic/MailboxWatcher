@@ -15,7 +15,7 @@ Sensor: [Shelly BLU Door/Window](https://www.shelly.com/blogs/documentation/blu-
 Gateway: [Shelly Bluetooth gateway](https://www.shelly.com/products/shelly-blu-gateway)
 
 My actual physical mailbox itself \*g\*
-<img width="1086" height="1448" alt="C007771F-A25C-46A2-9DE5-099903C79C10" src="https://github.com/user-attachments/assets/09b44a7d-b345-4d80-8485-ffc264fbc9ab" />
+<img width="1086" height="1448" alt="MyPhysicalMailbox" src="https://github.com/user-attachments/assets/1adb7020-9a13-4605-9dd7-da9a18bbfaa4" />
 
 ## ⚙️ How it works
 
