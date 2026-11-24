@@ -1,3 +1,6 @@
 <Solution>
+  <Folder Name="/Shelly/">
+    <File Path="shelly/mailbox-gateway.js" />
+  </Folder>
   <Project Path="MailboxWatcher/MailboxWatcher.csproj" />
 </Solution>
