@@ -29,6 +29,12 @@ Flap movement is a reminder to check the mailbox; it does not guarantee that a l
 
 The current source does not yet include explicit Azure Key Vault or Application Insights integration. Those services are part of the project's learning and integration goals.
 
+## Shelly Bluetooth gateway script
+
+Copy [`shelly/mailbox-gateway.js`](shelly/mailbox-gateway.js) into a script on the Shelly gateway, set `targetAddr` to the sensor's Bluetooth address, and start the script. It runs a passive scan, converts the sensor's `fcd2` service data to hex, and logs the result of each HTTP POST.
+
+The script sends JSON with `deviceId` and `fcd2Hex` to the configured Azure `/api/MailboxWatcher/shelly` endpoint. To use the API in this repository, point `endpoint` at `/api/mailboxevents/shelly` on your API host and send the two fields as `application/x-www-form-urlencoded`.
+
 ## Shelly request rate limiting
 
 The endpoint uses ASP.NET Core's built-in rate limiter to allow one request per fixed one-minute window, shared across all callers within an application instance. Requests above the limit return HTTP 429 with a `Retry-After` header and are not queued.
