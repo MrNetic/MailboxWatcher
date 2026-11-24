@@ -43,6 +43,10 @@ The rationale is to reduce bursts of email notifications caused by repeated devi
 
 This is an in-memory request limit: restarting the application resets it, and multiple instances have independent limits. Requests that reach the limiter consume the allowance even if validation or email delivery later fails. Fixed windows can allow two accepted requests close together across a window boundary, so this is not a strict 60-second interval between notifications. Authentication, event deduplication and reliable delivery remain separate planned improvements.
 
+##You got Mail! (real physical one :))
+<img width="395" height="211" alt="image" src="https://github.com/user-attachments/assets/70061166-7088-42cb-9e73-f4ab6dcde3f6" />
+
+
 ## 🛠️ Planned improvements ( as time/ priorities permits)
 
 This is still a work in progress. Next steps include:
