@@ -8,7 +8,14 @@ This project started with a missed letter. I did not check my mailbox in time, a
 
 Shelly hardware can detect whether a door is open or closed. I adapted that idea to the mailbox flap, so that movement can trigger an email and remind me to check for post.
 
-It also became an opportunity to refresh some technical knowledge around **Azure Key Vault secrets** and **Azure Application Insights**, while building something useful for an everyday problem.
+### Hardware used for the build
+
+Sensor: [Shelly BLU Door/Window](https://www.shelly.com/blogs/documentation/blu-door-window)
+
+Gateway: [Shelly Bluetooth gateway](https://www.shelly.com/products/shelly-blu-gateway)
+
+Physical mailbox itself \*g\*
+<img width="1086" height="1448" alt="C007771F-A25C-46A2-9DE5-099903C79C10" src="https://github.com/user-attachments/assets/09b44a7d-b345-4d80-8485-ffc264fbc9ab" />
 
 ## ⚙️ How it works
 
