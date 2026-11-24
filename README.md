@@ -12,7 +12,14 @@ Shelly hardware can detect whether a door is open or closed. I adapted that idea
 
 Sensor: [Shelly BLU Door/Window](https://www.shelly.com/blogs/documentation/blu-door-window)
 
+<img width="424" height="333" alt="image" src="https://github.com/user-attachments/assets/302f247b-330c-4de0-a6b4-01aa86816f20" />
+
+
+
 Gateway: [Shelly Bluetooth gateway](https://www.shelly.com/products/shelly-blu-gateway)
+
+<img width="424" height="333" alt="image" src="https://github.com/user-attachments/assets/c914452f-4114-4372-b906-ca884f5d63e1" />
+
 
 My actual physical mailbox itself \*g\*
 <img width="1086" height="1448" alt="MyPhysicalMailbox" src="https://github.com/user-attachments/assets/1adb7020-9a13-4605-9dd7-da9a18bbfaa4" />
